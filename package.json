@@ -1,0 +1,15 @@
+{
+  "name": "adage_editcal",
+  "version": "1.0.0",
+  "description": "Slack chatbot for Ad Age's editorial calendar.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Peterson",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  }
+}
