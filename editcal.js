@@ -4,6 +4,7 @@ var issues = [];
 var months = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
 
 module.exports = function(req, res, next) {
+  var userName = req.body.user_name;
   var input = req.body.text;
   var botPayload = {};
 
