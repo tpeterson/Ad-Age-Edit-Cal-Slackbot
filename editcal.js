@@ -35,6 +35,7 @@ Array.prototype.contains = function(x) {
 
 function getIssueName(x) {
   console.log("getIssueName");
+  var iss_date;
   if (x.contains('ISSUE')) {
     var query_issue_name1 = x[x.indexOf('ISSUE') - 2];
     var query_issue_name2 = x[x.indexOf('ISSUE') - 1];
@@ -43,14 +44,16 @@ function getIssueName(x) {
       var iss_name = iss.issue_name.split(" ");
       if (iss_name.contains(query_issue_name1) && iss_name.contains(query_issue_name2)) {
         console.log(iss.issue_month + " " + iss.issue_date);
-        return iss.issue_month + " " + iss.issue_date;
+        iss_date = iss.issue_month + " " + iss.issue_date;
       }
     });
   }
+  return iss_date;
 }
 
 function getIssueDate(x) {
   console.log("getIssueDate");
+  var iss_name;
   months.forEach(function(mon) {
     if (x.contains(mon)) {
       var iss_month = mon;
@@ -59,11 +62,12 @@ function getIssueDate(x) {
       issues.forEach(function(iss) {
         if (iss.issue_month === iss_month && iss.issue_date === iss_date) {
           console.log(iss.issue_name);
-          return iss.issue_name;
+          iss_name = iss.issue_name;
         }
       });
     }
   });
+  return iss_name;
 }
 
 function getNextIssue(x) {
